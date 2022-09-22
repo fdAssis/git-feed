@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.container:last-child {
+  margin-bottom: 0;
+}
+
+.commentBox {
+  flex: 1;
+}
+
+.comment {
+  padding: 0.75rem;
+  background: var(--gray-900);
+  border-radius: 8px;
+}
+
+.comment>header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.userInfo strong {
+  display: block;
+}
+
+.userInfo strong span {
+  font-weight: 400;
+  color: var(--gray-600);
+}
+
+.userInfo time {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.comment>header>button {
+  background: transparent;
+  line-height: 0;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: filter .2s;
+}
+
+.comment>header>button:hover {
+  filter: brightness(0.6);
+}
+
+.comment p {
+  margin-top: 1rem;
+}
+
+.like {
+  background: transparent;
+  border-radius: 8px;
+  border: none;
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--white);
+
+  transition: color .3s;
+}
+
+.like span::before {
+  padding: 0 0.25rem;
+  content: "\2022";
+}
+
+.like img {
+  margin-right: 0.4rem;
+}
+
+.like:hover {
+  color: var(--green-500);
+}
