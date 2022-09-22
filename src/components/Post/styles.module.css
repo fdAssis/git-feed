@@ -38,16 +38,6 @@
   line-height: 1.6;
 }
 
-.post .avatar {
-  width: calc(3rem + 10px);
-  height: calc(3rem + 10px);
-  object-fit: cover;
-
-  border-radius: 8px;
-  border: 3px solid var(--gray-700);
-  outline: 2px solid var(--green-500);
-}
-
 .content {
   margin-top: 2rem;
 }
@@ -137,4 +127,8 @@
 
 .comentForm button[type=submit]:hover {
   filter: brightness(0.6);
+}
+
+.comments {
+  margin-top: 1rem;
 }
