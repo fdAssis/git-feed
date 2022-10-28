@@ -5,7 +5,7 @@ import { Post } from "./components/Post";
 import styles from "./app.module.css";
 
 import { api } from "./service/api";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 export function App() {
   const [posts, setPosts] = useState([]);
 
