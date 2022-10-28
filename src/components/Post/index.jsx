@@ -1,8 +1,23 @@
+import { useState } from "react";
 import { Avatar } from "../Avatar";
 import { Comment } from "../Comment";
 import styles from "./styles.module.css";
 
 export function Post({ author, content, publishedAt }) {
+  const [commentList, setCommentList] = useState([]);
+  const [comment, setComment] = useState("");
+
+  function handleCreateNewComment() {
+    event.preventDefault();
+
+    setCommentList([...commentList, comment]);
+    setComment("");
+  }
+
+  function handleCommentChange() {
+    setComment(event.target.value);
+  }
+
   return (
     <article className={styles.post}>
       <header>
@@ -32,17 +47,22 @@ export function Post({ author, content, publishedAt }) {
           }
         })}
       </div>
-      <form className={styles.comentForm}>
+      <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
         <strong>Deixe seu feedback</strong>
-        <textarea placeholder="Escreva um comentário..." />
+        <textarea
+          placeholder="Escreva um comentário..."
+          value={comment}
+          onChange={handleCommentChange}
+        />
         <footer>
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
       <div className={styles.comments}>
-        <Comment />
-        <Comment />
-        <Comment />
+        {commentList.map((comment) => {
+          return <Comment content={comment} />;
+        })}
       </div>
     </article>
   );

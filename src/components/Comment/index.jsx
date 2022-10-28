@@ -2,7 +2,7 @@ import styles from "./comment.module.css";
 import Delete from "../../assets/delete.svg";
 import Like from "../../assets/like.svg";
 import { Avatar } from "../Avatar";
-export function Comment() {
+export function Comment({ content }) {
   return (
     <div className={styles.container}>
       <Avatar
@@ -20,14 +20,14 @@ export function Comment() {
                 title="14 de Setembro às 12:00h"
                 dateTime="2022-09-14 12:00"
               >
-                Cerca de 2h atras
+                Cerca de 2h atrás
               </time>
             </div>
-            <button title="Deletar comentario">
+            <button title="Deletar comentário">
               <img src={Delete} />
             </button>
           </header>
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{content}</p>
         </div>
 
         <footer>
