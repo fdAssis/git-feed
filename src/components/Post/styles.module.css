@@ -125,8 +125,14 @@
   transition: filter 0.3s;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button[type=submit]:not(:disabled):hover {
   filter: brightness(0.6);
+}
+
+.commentForm button[type=submit]:disabled {
+  transition: background 0.5s;
+  background: var(--gray-600);
+  cursor: not-allowed;
 }
 
 .comments {
