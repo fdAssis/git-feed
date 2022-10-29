@@ -15,8 +15,23 @@ export function Post({ author, content, publishedAt }) {
   }
 
   function handleCommentChange() {
+    event.target.setCustomValidity("");
     setComment(event.target.value);
   }
+
+  function commentEmpty() {
+    event.target.setCustomValidity("Comentário não pode ser vazio");
+  }
+
+  function deleteComment(commentWillBeDeleted) {
+    const commentsWithoutCommentDeleted = commentList.filter((comment) => {
+      return comment !== commentWillBeDeleted;
+    });
+
+    setCommentList(commentsWithoutCommentDeleted);
+  }
+
+  const commentIsEmpty = comment.length === 0;
 
   return (
     <article className={styles.post}>
@@ -52,16 +67,20 @@ export function Post({ author, content, publishedAt }) {
         <textarea
           placeholder="Escreva um comentário..."
           value={comment}
+          required
+          onInvalid={commentEmpty}
           onChange={handleCommentChange}
         />
         <footer>
-          <button type="submit">Publicar</button>
+          <button type="submit" disabled={commentIsEmpty}>
+            Publicar
+          </button>
         </footer>
       </form>
 
       <div className={styles.comments}>
         {commentList.map((comment) => {
-          return <Comment content={comment} />;
+          return <Comment content={comment} onDeleteComment={deleteComment} />;
         })}
       </div>
     </article>

@@ -2,7 +2,11 @@ import styles from "./comment.module.css";
 import Delete from "../../assets/delete.svg";
 import Like from "../../assets/like.svg";
 import { Avatar } from "../Avatar";
-export function Comment({ content }) {
+export function Comment({ content, onDeleteComment }) {
+  function handleDeleteComment() {
+    onDeleteComment(content);
+  }
+
   return (
     <div className={styles.container}>
       <Avatar
@@ -23,7 +27,7 @@ export function Comment({ content }) {
                 Cerca de 2h atrás
               </time>
             </div>
-            <button title="Deletar comentário">
+            <button title="Deletar comentário" onClick={handleDeleteComment}>
               <img src={Delete} />
             </button>
           </header>
