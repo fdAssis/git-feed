@@ -1,42 +1,45 @@
 {
-  "post": [
+  "posts": [
   {
     "id":1,
     "author": {
-      "avatar_url":"https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=40",
-      "name":"Francisco de Assis",
-      "role": "Web Develop"
+      "avatar_url":"https://images.unsplash.com/photo-1508179522353-11ba468c4a1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "name":"Gabriel Fernandes",
+      "role": "Back-end Developer | Análise e Desenvolvimentos de Sistemas"
     },
     "content": [
-      {"type":"paragraph", "content": "Fala dev ✨" },
-      {"type":"paragraph", "content": "Acabei de subir mais um projeto no meu portfólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare"},
-      {"type":"link", "content": "github/fdAssis"}
-    ]
+      {"type":"paragraph", "content": "Devs 🚀🚀" },
+      {"type":"paragraph", "content": "Boa tarde a todos queria compartilhar com vocês um projeto de um site para uma clínica que eu desenvolvi,ainda não acabei tudo mas estou quase."},
+      {"type":"link", "content": "https://github.com/gabriFer"}
+    ],
+    "published_at": "2022-10-27T00:45:52.053Z"
   },
   {
-    "id":1,
+    "id":2,
     "author": {
-      "avatar_url":"https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=40",
-      "name":"Francisco de Assis",
-      "role": "Web Develop"
+      "avatar_url":"https://avatars.githubusercontent.com/u/12402324?v=4",
+      "name":"Lucas Caresia",
+      "role": "Full Stack"
     },
     "content": [
       {"type":"paragraph", "content": "Fala dev ✨" },
       {"type":"paragraph", "content": "Acabei de subir mais um projeto no meu portfólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare"},
-      {"type":"link", "content": "github/fdAssis"}
-    ]
+      {"type":"link", "content": "https://github.com/lcaresia"}
+    ],
+    "published_at": "2022-10-27T00:45:52.053Z"
   },
   {
-    "id":1,
+    "id":3,
     "author": {
-      "avatar_url":"https://images.unsplash.com/photo-1508280756091-9bdd7ef1f463?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=40",
+      "avatar_url":"https://images.unsplash.com/photo-1530452540414-c17a65a637fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
       "name":"Francisco de Assis",
-      "role": "Web Develop"
+      "role": "Dev JavaScript | TypeScript"
     },
     "content": [
-      {"type":"paragraph", "content": "Fala dev ✨" },
-      {"type":"paragraph", "content": "Acabei de subir mais um projeto no meu portfólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare"},
-      {"type":"link", "content": "github/fdAssis"}
-    ]
+      {"type":"paragraph", "content": "" },
+      {"type":"paragraph", "content": "Essa é uma aplicação onde o principal objetivo é uma página para listagem de filmes de acordo com gênero."},
+      {"type":"link", "content": "https://github.com/fdAssis"}
+    ],
+    "published_at": "2022-10-27T00:45:52.053Z"
   }]
 }

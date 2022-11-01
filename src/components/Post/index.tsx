@@ -1,29 +1,30 @@
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
+import { PostProps } from "../../App";
 import { Avatar } from "../Avatar";
 import { Comment } from "../Comment";
 import styles from "./styles.module.css";
 
-export function Post({ author, content, publishedAt }) {
-  const [commentList, setCommentList] = useState([]);
+export function Post({ author, content, publishedAt }: PostProps) {
+  const [commentList, setCommentList] = useState<string[]>([]);
   const [comment, setComment] = useState("");
 
-  function handleCreateNewComment() {
+  function handleCreateNewComment(event: FormEvent) {
     event.preventDefault();
 
     setCommentList([...commentList, comment]);
     setComment("");
   }
 
-  function handleCommentChange() {
+  function handleCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("");
     setComment(event.target.value);
   }
 
-  function commentEmpty() {
+  function commentEmpty(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("Comentário não pode ser vazio");
   }
 
-  function deleteComment(commentWillBeDeleted) {
+  function deleteComment(commentWillBeDeleted: string) {
     const commentsWithoutCommentDeleted = commentList.filter((comment) => {
       return comment !== commentWillBeDeleted;
     });

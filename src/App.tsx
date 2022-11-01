@@ -6,8 +6,26 @@ import styles from "./app.module.css";
 
 import { api } from "./service/api";
 import React, { useEffect, useState } from "react";
+
+interface Author {
+  name: string;
+  avatar_url: string;
+  role: string;
+}
+
+interface Content {
+  content: string;
+  type: "paragraph" | "link";
+}
+
+export interface PostProps {
+  author: Author;
+  content: Content[];
+  publishedAt: string;
+}
+
 export function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<PostProps[]>([]);
 
   useEffect(() => {
     api
@@ -27,7 +45,7 @@ export function App() {
               <Post
                 author={post.author}
                 content={post.content}
-                publishedAt={post.published_at}
+                publishedAt={post.publishedAt}
               />
             );
           })}
