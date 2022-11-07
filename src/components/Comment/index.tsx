@@ -38,7 +38,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
                 title="14 de Setembro às 12:00h"
                 dateTime="2022-09-14 12:00"
               >
-                Cerca de 2h atrás
+                Cerca de -1 min
               </time>
             </div>
             <button title="Deletar comentário" onClick={handleDeleteComment}>
@@ -51,7 +51,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
         <footer>
           <button className={styles.like} onClick={handleLike}>
             <img src={Like} />
-            Curtir
+            Aplaudir
             <span>{likes}</span>
           </button>
         </footer>
